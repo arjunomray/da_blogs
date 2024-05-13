@@ -3,7 +3,9 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.urls import is_valid_path
 from django.db.models import Count
 from django.contrib.postgres.search import SearchVector, SearchQuery, SearchRank
+from django.core.mail import send_mail
 from taggit.models import Tag
+
 # from django.views.generic import ListView
 from .models import Post, Comment
 from .forms import EmailPostForm, CommentForm, SearchForm
